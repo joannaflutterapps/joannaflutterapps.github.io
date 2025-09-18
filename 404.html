@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="de">
+
+<script>
+	// load darkTheme if user prefers dark theme
+	const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+	const savedTheme = localStorage.getItem('theme');
+	const theme = savedTheme || (systemPrefersDark ? 'cqmDark' : 'cmqLight');
+	// save theme so ThemeToggler has correct state 
+	localStorage.setItem('theme', theme);
+	document.documentElement.setAttribute('data-theme', theme);
+</script>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+		<link rel="modulepreload" href="/_app/immutable/entry/start.BvUObG_6.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/DjEIea79.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/jF4pAALt.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/BMYAVFKK.js">
+		<link rel="modulepreload" href="/_app/immutable/entry/app.8uQlV3km.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/BXVETxv0.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/DsnmJJEf.js">
+
+	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&display=swap"
+			rel="stylesheet">
+	</head>
+</head>
+
+<body data-sveltekit-preload-data="hover">
+	<div style="display: contents">
+			<script>
+				{
+					__sveltekit_3wnv96 = {
+						base: ""
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("/_app/immutable/entry/start.BvUObG_6.js"),
+						import("/_app/immutable/entry/app.8uQlV3km.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element);
+					});
+				}
+			</script>
+		</div>
+</body>
+
+</html>
